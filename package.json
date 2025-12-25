@@ -1,0 +1,40 @@
+{
+  "name": "nodejs-blueprint",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "dev": "tsx --watch src/app.ts",
+    "build": "rimraf ./dist && tsc",
+    "start": "npm run build && node dist/app.js",
+    "biome:lint": "biome lint ./src",
+    "biome:lint:fix": "biome lint --write ./src",
+    "biome:format": "biome format ./src",
+    "biome:format:fix": "biome format --write ./src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/poschuler/nodejs-blueprint.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/poschuler/nodejs-blueprint/issues"
+  },
+  "homepage": "https://github.com/poschuler/nodejs-blueprint#readme",
+  "devDependencies": {
+    "@biomejs/biome": "2.3.10",
+    "@tsconfig/node24": "^24.0.3",
+    "@types/express": "^5.0.6",
+    "@types/node": "^25.0.3",
+    "rimraf": "^6.1.2",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1"
+  }
+}
